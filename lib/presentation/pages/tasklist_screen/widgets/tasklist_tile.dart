@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roulette_task/designs/colors.dart';
+import 'package:roulette_task/presentation/global/colors/colors.dart';
 
 class TaskListTile extends StatefulWidget {
   final String title;

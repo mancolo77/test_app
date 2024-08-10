@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:roulette_task/designs/app_icons.dart';
-import 'package:roulette_task/designs/colors.dart';
-import 'package:roulette_task/second_screen/second_screen.dart';
-import 'package:roulette_task/settings_screen/settings_screen.dart';
-import 'package:roulette_task/tasklist_screen/taskview_screen.dart';
+import 'package:roulette_task/presentation/global/icons/app_icons.dart';
+import 'package:roulette_task/presentation/global/colors/colors.dart';
+import 'package:roulette_task/presentation/pages/second_screen/second_screen.dart';
+import 'package:roulette_task/presentation/pages/settings_screen/settings_screen.dart';
+import 'package:roulette_task/presentation/pages/tasklist_screen/taskview_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({

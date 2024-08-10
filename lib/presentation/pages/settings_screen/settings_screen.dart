@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:roulette_task/settings_screen/widgets/text_button.dart';
-import 'package:roulette_task/task_3/third_task.dart';
-import 'package:roulette_task/tast_4/fourth_task.dart';
+import 'package:roulette_task/presentation/pages/settings_screen/widgets/text_button.dart';
+import 'package:roulette_task/presentation/pages/task_3/third_task.dart';
+import 'package:roulette_task/presentation/pages/tast_4/fourth_task.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SettingsScreen extends StatefulWidget {

@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 class MockRepository {
   Future<int> getMinimalTitleLength() async {
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 1));
     return 6;
   }
 }
@@ -13,7 +13,7 @@ class CreateFormScreen extends StatefulWidget {
   const CreateFormScreen({super.key});
 
   @override
-  _CreateFormScreenState createState() => _CreateFormScreenState();
+  State<CreateFormScreen> createState() => _CreateFormScreenState();
 }
 
 class _CreateFormScreenState extends State<CreateFormScreen> {
@@ -43,7 +43,19 @@ class _CreateFormScreenState extends State<CreateFormScreen> {
   void _showSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(message),
+        content: Text(
+          message,
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.blueAccent,
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.all(16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
     );
   }
@@ -51,7 +63,7 @@ class _CreateFormScreenState extends State<CreateFormScreen> {
   void _validateAndSubmit() {
     if (!_formKey.currentState!.validate()) {
       if (_titleController.text.length < _minTitleLength!) {
-        _showSnackBar('Поле должно содержать более $_minTitleLength.');
+        _showSnackBar('Поле должно содержать более $_minTitleLength символов');
       } else if (!RegExp(
               r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
           .hasMatch(_emailController.text)) {
@@ -90,7 +102,7 @@ class _CreateFormScreenState extends State<CreateFormScreen> {
                           return 'Поле не может быть пустым';
                         }
                         if (value.length < _minTitleLength!) {
-                          return 'Поле должно содержать более $_minTitleLength.';
+                          return 'Поле должно содержать более $_minTitleLength символов';
                         }
                         return null;
                       },

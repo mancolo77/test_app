@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:roulette_task/designs/colors.dart';
-import 'package:roulette_task/tasklist_screen/widgets/tasklist_tile.dart';
+import 'package:roulette_task/presentation/global/colors/colors.dart';
+import 'package:roulette_task/presentation/pages/tasklist_screen/widgets/tasklist_tile.dart';
 
 class TaskListView extends StatefulWidget {
   const TaskListView({super.key, required this.lists});

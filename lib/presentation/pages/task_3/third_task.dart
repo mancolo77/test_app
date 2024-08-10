@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-
-class Purchase {
-  final String title;
-  final double price;
-  final DateTime date;
-
-  Purchase({required this.title, required this.price, required this.date});
-}
+import 'package:roulette_task/models/purchase.dart';
 
 class PurchaseListView extends StatefulWidget {
   const PurchaseListView({super.key});
